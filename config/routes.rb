@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :users
 
   resources :users do
-    resources :trips only: [:index]
+    resources :trips, only: [:index]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
