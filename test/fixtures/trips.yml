@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trip_name: MyString
+  trip_date: MyString
+  description: MyText
+  fave_memory: MyString
+  photo: MyString
+  city_id: 
+  user_id: 
+
+two:
+  trip_name: MyString
+  trip_date: MyString
+  description: MyText
+  fave_memory: MyString
+  photo: MyString
+  city_id: 
+  user_id: 
