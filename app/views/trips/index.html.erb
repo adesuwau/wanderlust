@@ -15,7 +15,7 @@
   </thead>
 
   <tbody>
-    <% @trips.each do |trip| %>
+    <% @user.trips.each do |trip| %>
       <tr>
         <td><%= trip.trip_name %></td>
         <td><%= trip.trip_date %></td>
@@ -40,7 +40,7 @@
   <script src="http://d3js.org/topojson.v1.min.js"></script>
   <!-- I recommend you host this file on your own, since this will change without warning -->
   <script src="http://datamaps.github.io/scripts/datamaps.world.min.js?v=1"></script>
-  <h2>insert username here</h2>
+  <h2><%= @user.username %></h2>
 
 
 <div id="container" style="position: relative; width: 1400px; height: 500px;"></div>
