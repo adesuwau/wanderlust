@@ -7,8 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-u1 = User.create(username: 'Anastasa27', email: 'iheartga@ga.com', password_digest: 'blah')
-u2 = User.create(username: 'robertyu', email: 'sblatt@ga.co', password_digest: 'ade')
+u1 = User.create(username: 'Anastasa27', email: 'iheartga@ga.com', password: 'blah')
+u2 = User.create(username: 'robertyu', email: 'sblatt@ga.co', password: 'ade')
 co1 = Country.create(name: 'France', continent: 'Europe')
 co2 = Country.create(name: 'Brazil', continent: 'Europe')
 co3 = Country.create(name: 'Thailand', continent: 'Asia')
