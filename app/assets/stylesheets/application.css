@@ -14,7 +14,7 @@
  *= require_self
  */
 
-body
+.login-background
 {
     background: url('http://www.zastavki.com/pictures/2560x1600/2010/World_Travel___Tourism_Old_Map_023362_.jpg') fixed;
     background-size: cover;
