@@ -47,7 +47,12 @@
 <div id="container" style="position: relative; width: 1400px; height: 500px;"></div>
 
 <script>
-    var map = new Datamap({element: document.getElementById('container')});
+    var map = new Datamap({
+    element: document.getElementById('container'),
+    fills: {
+            defaultFill: 'rgba(29,30,25)' //any hex, color name or rgb/rgba value
+        }
+        });
 </script>
 
 
