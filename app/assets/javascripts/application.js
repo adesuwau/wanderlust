@@ -17,8 +17,20 @@
 
 $(document).ready(function(){
   var userId = $('h2').data().id;
-  $.get("/users/" + userId + "/countries", function(){
-      console.log("hi");
+  $.get("/users/" + userId + "/countries", function(data){
+      for (var i = 0; i < data.length; i++) {
+
+        var country = data[i];
+        console.log(country);
+      }
+      data: {
+
+        USA: {
+          fillkey: #ff6600;
+        }
+      }
+      debugger;
+
   }).done(function() {
       var map = new Datamap({
     element: document.getElementById('container'),

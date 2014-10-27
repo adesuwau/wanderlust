@@ -28,6 +28,8 @@ gem 'spring',        group: :development
 gem 'pry-rails', group: :development
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+gem 'countries'
+gem 'country-select'
 
 # Use unicorn as the app server
 # gem 'unicorn'
