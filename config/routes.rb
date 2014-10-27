@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     root 'welcome#index'
 
     get "/login" => "sessions#new"
+    get "/countries/:name" => "countries#name"
+    get '/users/:id/countries' => "users#countries"
 
   resource  :session, only: [:create, :destroy]
 

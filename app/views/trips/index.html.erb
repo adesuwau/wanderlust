@@ -1,59 +1,52 @@
-<h1>Listing trips</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Trip name</th>
-      <th>Trip date</th>
-      <th>Description</th>
-      <th>Fave memory</th>
-      <th>Photo</th>
-      <th>City</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @user.trips.each do |trip| %>
-      <tr>
-        <td><%= trip.trip_name %></td>
-        <td><%= trip.trip_date %></td>
-        <td><%= trip.description %></td>
-        <td><%= trip.fave_memory %></td>
-        <td><%= trip.photo %></td>
-        <td><%= trip.city.name %></td>
-        <td><%= trip.user.username %></td>
-        <td><%= link_to 'Show', trip %></td>
-        <td><%= link_to 'Edit', edit_trip_path(trip) %></td>
-        <td><%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-
-<body>
-  <script src="http://d3js.org/d3.v3.min.js"></script>
-  <script src="http://d3js.org/topojson.v1.min.js"></script>
-  <!-- I recommend you host this file on your own, since this will change without warning -->
-  <script src="http://datamaps.github.io/scripts/datamaps.world.min.js?v=1"></script>
-  <h2><%= @user.username %></h2>
+  <h2 data-id="<%= @user.id %>"><%= @user.username %></h2>
   <h3><%= @user.fave_travel_quote %></h3>
 
 
 <div id="container" style="position: relative; width: 1400px; height: 500px;"></div>
+<div id="trip-data"></div>
 
-<script>
-    var map = new Datamap({
-    element: document.getElementById('container'),
-    fills: {
-            defaultFill: 'rgba(29,30,25)' //any hex, color name or rgb/rgba value
-        }
-        });
-</script>
+<!-- //   var map = new Datamap({
+//     element: document.getElementById('container'),
+//     fills: {
+//             defaultFill: 'rgba(0,0,0,0.6)'
+//   },
+//   done: function(datamap) {
+//         datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
+//           // var userId = $('h2').data().id;
+//           var countryName = geography.properties.name;
+//           $.get("/countries/" + countryName, function (data){
+//             console.log('data available.');
+//           })
 
-
+//         });
+//   }
+//   });
+//
+ -->
 <%= link_to 'New Trip', new_trip_path %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

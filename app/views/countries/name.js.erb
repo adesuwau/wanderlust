@@ -1,0 +1,3 @@
+$('#trip-data').empty();
+var trips = "<%= escape_javascript(render 'trips') %>";
+$('#trip-data').append(trips);

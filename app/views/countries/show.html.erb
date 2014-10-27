@@ -10,5 +10,11 @@
   <%= @country.continent %>
 </p>
 
+  <strong>Trips:</strong>
+  <% @country.trips.each do |trip| %>
+  <%= trip.trip_name %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_country_path(@country) %> |
 <%= link_to 'Back', countries_path %>

@@ -14,3 +14,25 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree
+
+$(document).ready(function(){
+  var userId = $('h2').data().id;
+  $.get("/users/" + userId + "/countries", function(){
+      console.log("hi");
+  }).done(function() {
+      var map = new Datamap({
+    element: document.getElementById('container'),
+    fills: {
+            defaultFill: 'rgba(0,0,0,0.6)'
+    },
+    done: function(datamap) {
+          datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
+            var countryName = geography.properties.name;
+            $.get("/countries/" + countryName, function (data){
+              console.log('data available.');
+            })
+          });
+    }
+    });
+  });
+});

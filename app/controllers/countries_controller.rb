@@ -1,10 +1,19 @@
 class CountriesController < ApplicationController
   before_action :set_country, only: [:show, :edit, :update, :destroy]
+  # respond_to :html, :xml, :json, :js
 
   # GET /countries
   # GET /countries.json
   def index
     @countries = Country.all
+  end
+
+  def name
+    countryname = params[:name]
+    @trips = current_user.trips.where(country_name: countryname)
+      respond_to do |format|
+        format.js
+      end
   end
 
   # GET /countries/1

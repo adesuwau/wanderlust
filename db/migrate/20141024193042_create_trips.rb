@@ -6,8 +6,11 @@ class CreateTrips < ActiveRecord::Migration
       t.text :description
       t.string :fave_memory
       t.string :photo
+      t.string :country_name
+      t.string :city_name
       t.references :city, index: true
       t.references :user, index: true
+      t.references :country, index: true
 
       t.timestamps
     end
