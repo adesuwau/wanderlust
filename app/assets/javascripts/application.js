@@ -16,6 +16,8 @@
 //= require_tree
 
 $(document).ready(function(){
+  $('body').on('click', '.trips', showTripsModal);
+  $('body').on('click','#close-modal', closeTripsModal);
   var userId = $('h2').data().id;
   $.ajax({
   url: "/users/" + userId + "/countries"
@@ -44,3 +46,11 @@ $(document).ready(function(){
     });
   });
 });
+
+function showTripsModal(){
+  $('.modal-container').css('display', 'block');
+}
+
+function closeTripsModal(){
+$('.modal-container').css('display', 'none');
+}

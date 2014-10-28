@@ -18,7 +18,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <div class="modal-container">
+    <div class="modal-content">
+      <a href="#" id="close-modal">Close</a>
+      <div id="map-modal"></div>
+    </div>
+  </div>
 <%= yield %>
 
 </body>
