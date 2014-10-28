@@ -52,10 +52,10 @@ ActiveRecord::Schema.define(version: 20141024193042) do
   add_index "trips", ["user_id"], name: "index_trips_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
-    t.string   "username"
-    t.string   "email"
-    t.string   "fave_travel_quote"
-    t.string   "password_digest"
+    t.string   "username",          null: false
+    t.string   "email",             null: false
+    t.string   "fave_travel_quote", null: false
+    t.string   "password_digest",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

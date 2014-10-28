@@ -1,0 +1,3 @@
+$('#new-trip-form').empty();
+var newTrips = "<%= escape_javascript(render 'form') %>";
+$('#new-trip-form').append(newTrips);

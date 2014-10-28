@@ -1,0 +1,5 @@
+$('.modal-container').css('display', 'none');
+$('#new-trip-form').css('display', 'block');
+$('#new-trip-form').empty();
+var editTrips = "<%= escape_javascript(render 'form') %>";
+$('#new-trip-form').append(editTrips);

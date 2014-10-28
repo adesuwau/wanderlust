@@ -11,39 +11,37 @@
     </div>
   <% end %>
 
+<div class="trip-form-content clearfix">
   <div class="field">
-    <%= f.label :trip_name %><br>
-    <%= f.text_field :trip_name %>
+    <%= f.text_field :trip_name, :placeholder => 'Trip Name'%>
   </div>
   <div class="field">
-    <%= f.label :trip_date %><br>
-    <%= f.text_field :trip_date %>
+    <%= f.text_field :trip_date, :placeholder => 'Trip Date' %>
+  </div>
+</div>
+
+  <div class="trip-description">
+    <%= f.text_area :description, :placeholder =>'Description' %>
+  </div>
+
+<div class="trip-form-content clearfix">
+  <div class="field">
+    <%= f.text_field :fave_memory, :placeholder => 'Fave Memory' %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_field :photo, :placeholder => 'Photo URL' %>
   </div>
-  <div class="field">
-    <%= f.label :fave_memory %><br>
-    <%= f.text_field :fave_memory %>
-  </div>
-  <div class="field">
-    <%= f.label :photo %><br>
-    <%= f.text_field :photo %>
+</div>
+<div class="trip-form-content clearfix">
+    <div class="field">
+    <%= f.text_field :country_name, :placeholder => 'Country Name' %>
   </div>
     <div class="field">
-    <%= f.label :country_name %><br>
-    <%= f.text_field :country_name %>
+    <%= f.text_field :city_name, :placeholder => 'City Name' %>
   </div>
-    <div class="field">
-    <%= f.label :city_name %><br>
-    <%= f.text_field :city_name %>
-  </div>
-<!--   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
-  </div> -->
+</div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :id =>'submit' %>
   </div>
 <% end %>

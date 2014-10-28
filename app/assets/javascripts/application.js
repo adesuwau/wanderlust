@@ -18,6 +18,8 @@
 $(document).ready(function(){
   $('body').on('click', '.trips', showTripsModal);
   $('body').on('click','#close-modal', closeTripsModal);
+  $('body').on('click', '#new-trip', showNewTripForm);
+  $('body').on('click', '#submit', closeNewTripForm);
   var userId = $('h2').data().id;
   $.ajax({
   url: "/users/" + userId + "/countries"
@@ -53,4 +55,12 @@ function showTripsModal(){
 
 function closeTripsModal(){
 $('.modal-container').css('display', 'none');
+}
+
+function showNewTripForm(){
+  $('#new-trip-form').css('display', 'block');
+}
+
+function closeNewTripForm(){
+  $('#new-trip-form').css('display', 'none')
 }

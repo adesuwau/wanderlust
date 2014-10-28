@@ -18,10 +18,17 @@ class TripsController < ApplicationController
   # GET /trips/new
   def new
     @trip = Trip.new
+    respond_to do |format|
+        format.js
+      end
   end
 
   # GET /trips/1/edit
   def edit
+    @trip = Trip.find(params[:id])
+    respond_to do |format|
+        format.js
+      end
   end
 
   # POST /trips
@@ -31,11 +38,12 @@ class TripsController < ApplicationController
     @trip.user_id = current_user.id
     respond_to do |format|
       if @trip.save
-        format.html { redirect_to @trip, notice: 'Trip was successfully created.' }
-        format.json { render :show, status: :created, location: @trip }
+        format.html { redirect_to user_trips_path(current_user) }
+        # format.json { render :show, status: :created, location: @trip }
       else
         format.html { render :new }
         format.json { render json: @trip.errors, status: :unprocessable_entity }
+        format.js { render :action => 'new' }
       end
     end
   end
@@ -45,8 +53,9 @@ class TripsController < ApplicationController
   def update
     respond_to do |format|
       if @trip.update(trip_params)
-        format.html { redirect_to @trip, notice: 'Trip was successfully updated.' }
-        format.json { render :show, status: :ok, location: @trip }
+        format.html { redirect_to user_trips_path(current_user) }
+        # format.html { redirect_to @trip, notice: 'Trip was successfully updated.' }
+        # format.json { render :show, status: :ok, location: @trip }
       else
         format.html { render :edit }
         format.json { render json: @trip.errors, status: :unprocessable_entity }
