@@ -25,7 +25,7 @@ class TripsController < ApplicationController
   # POST /trips.json
   def create
     @trip = Trip.new(trip_params)
-
+    @trip.user_id = current_user.id
     respond_to do |format|
       if @trip.save
         format.html { redirect_to @trip, notice: 'Trip was successfully created.' }
@@ -69,6 +69,6 @@ class TripsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trip_params
-      params.require(:trip).permit(:trip_name, :trip_date, :description, :fave_memory, :photo, :city_id, :user_id)
+      params.require(:trip).permit(:trip_name, :trip_date, :description, :fave_memory, :photo, :country_name, :city_name, :user_id)
     end
 end

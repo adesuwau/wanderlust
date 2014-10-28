@@ -23,6 +23,7 @@ class UsersController < ApplicationController
   end
 
   def countries
+    # binding.pry
     @trips = current_user.trips.map do |trip|
       Country.find_country_by_name(trip.country_name).alpha3
     end
