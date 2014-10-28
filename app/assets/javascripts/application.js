@@ -17,25 +17,20 @@
 
 $(document).ready(function(){
   var userId = $('h2').data().id;
-  $.get("/users/" + userId + "/countries", function(data){
-      for (var i = 0; i < data.length; i++) {
-
-        var country = data[i];
-        console.log(country);
-      }
-      data: {
-
-        USA: {
-          fillkey: #ff6600;
-        }
-      }
-      debugger;
-
-  }).done(function() {
-      var map = new Datamap({
+  $.ajax({
+  url: "/users/" + userId + "/countries"
+  })
+  .done(function(data) {
+    var newData = {};
+    for (i=0; i < data.length; i++) {
+      newData[data[i]] = {fillKey: 'isATrip' };
+    }
+    console.log(newData);
+    var map = new Datamap({
     element: document.getElementById('container'),
     fills: {
-            defaultFill: 'rgba(0,0,0,0.6)'
+            defaultFill: 'rgba(0,0,0,0.6)',
+            isATrip: '#6de3cd'
     },
     done: function(datamap) {
           datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
@@ -44,7 +39,8 @@ $(document).ready(function(){
               console.log('data available.');
             })
           });
-    }
+    },
+    data: newData
     });
   });
 });

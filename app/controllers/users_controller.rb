@@ -24,9 +24,8 @@ class UsersController < ApplicationController
 
   def countries
     @trips = current_user.trips.map do |trip|
-      trip.country_name
+      Country.find_country_by_name(trip.country_name).alpha3
     end
-    # binding.pry
     render json: @trips
   end
 
