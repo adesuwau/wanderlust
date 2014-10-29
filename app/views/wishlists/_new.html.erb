@@ -1,0 +1,30 @@
+<%= form_for(@wishlist) do |f| %>
+  <% if @wishlist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wishlist.errors.count, "error") %> prohibited this wishlist country from being saved:</h2>
+
+      <ul>
+      <% @wishlist.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="trip-form-content clearfix">
+  <div class="field">
+    <%= f.text_field :country_name, :placeholder => 'Country Name' %>
+  </div>
+  <div class="field">
+    <%= f.text_field :city_name, :placeholder => 'City Name' %>
+  </div>
+</div>
+<div class="trip-form-content clearfix">
+  <div class="field">
+    <%= f.text_field :tentative_dates, :placeholder => 'Tentative Dates' %>
+  </div>
+</div>
+ <div class="actions">
+    <%= f.submit :id =>'submit' %>
+</div>
+<% end %>

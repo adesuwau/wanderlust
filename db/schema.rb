@@ -11,26 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141024193042) do
+ActiveRecord::Schema.define(version: 20141029160823) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "cities", force: true do |t|
-    t.string   "name"
-    t.integer  "country_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "cities", ["country_id"], name: "index_cities_on_country_id", using: :btree
-
-  create_table "countries", force: true do |t|
-    t.string   "name"
-    t.string   "continent"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "trips", force: true do |t|
     t.string   "trip_name"
@@ -40,15 +24,11 @@ ActiveRecord::Schema.define(version: 20141024193042) do
     t.string   "photo"
     t.string   "country_name"
     t.string   "city_name"
-    t.integer  "city_id"
     t.integer  "user_id"
-    t.integer  "country_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "trips", ["city_id"], name: "index_trips_on_city_id", using: :btree
-  add_index "trips", ["country_id"], name: "index_trips_on_country_id", using: :btree
   add_index "trips", ["user_id"], name: "index_trips_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
@@ -59,5 +39,16 @@ ActiveRecord::Schema.define(version: 20141024193042) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "wishlists", force: true do |t|
+    t.string   "country_name"
+    t.string   "city_name"
+    t.string   "tentative_dates"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "wishlists", ["user_id"], name: "index_wishlists_on_user_id", using: :btree
 
 end

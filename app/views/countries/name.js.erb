@@ -1,3 +1,4 @@
 $('#trip-data').empty();
+$('<h3>').text("Trips").appendTo("#trip-data");
 var trips = "<%= escape_javascript(render 'trips') %>";
 $('#trip-data').append(trips);

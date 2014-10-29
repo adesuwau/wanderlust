@@ -5,6 +5,10 @@ Rails.application.routes.draw do
     get "/login" => "sessions#new"
     get "/countries/:name" => "countries#name"
     get '/users/:id/countries' => "users#countries"
+    get "/wishlists" => "wishlists#countries"
+    get "/wishlists/new" => "wishlists#new"
+    post "/wishlists" => "wishlists#create"
+    get "/wishlists/:id" => "wishlists#show"
 
   resource  :session, only: [:create, :destroy]
 

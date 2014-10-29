@@ -85,7 +85,26 @@ div {
   display: none;
 
 }
-
+#new_wishlist {
+  width: 400px;
+  text-align: center;
+  margin: 0;
+}
+#new_wishlist input {
+  border: 0;
+  border-bottom: 1px solid black;
+}
+#new_wishlist #submit {
+  margin-top: 2em;
+  width: 100%;
+}
+#new_wishlist .trip-form-content {
+  margin-top: 2em;
+}
+#new_wishlist #wishlist_tentative_dates {
+padding-top: 4em;
+margin-left: 9em;
+}
 #new_trip input, .edit_trip input{
   width: 100%;
   border: 0;

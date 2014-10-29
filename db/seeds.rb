@@ -63,3 +63,11 @@ t4.user_id = u2.id
 t4.save
 # t4.country_id = co4.id
 # t4.save
+
+w1 = Wishlist.create(country_name: 'South Africa', city_name: 'Capetown', tentative_dates: 'New Years 2015')
+w2 = Wishlist.create(country_name: 'Russia', city_name: 'Moscow', tentative_dates: 'Christmas 2016')
+
+w1.user_id = u1.id
+w1.save
+w2.user_id = u1.id
+w2.save

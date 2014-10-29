@@ -12,6 +12,7 @@
 
 class User < ActiveRecord::Base
   has_many :trips
+  has_many :wishlists
   validates :username, :email, :fave_travel_quote, :password_digest, presence: true
   validates :email, uniqueness: true
   has_secure_password
