@@ -162,14 +162,21 @@ header h2{
   font-family: 'Philosopher', sans-serif;
 }
 
-header h3{
+header h3, h3{
   color: white;
   font-family: 'Sacramento', cursive;
 }
 
+#map-key{
+position: absolute;
+width: 15%;
+top: 361px;
+border: 1px solid black;
+}
+
 #new-trip-link{
   position: absolute;
-  left: 50%;
+  left: 42%;
 }
 
 #logout{

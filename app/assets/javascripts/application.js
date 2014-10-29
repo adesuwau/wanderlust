@@ -48,7 +48,7 @@ $.when(deferred1, deferred2).done(function(data1, data2) {
           fills: {
             defaultFill: 'rgba(0,0,0,0.6)',
             isATrip: '#6de3cd',
-            wishlist: '#FF0000'
+            wishlist: '#CC66FF'
           },
     done: function(datamap) {
       datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
