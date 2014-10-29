@@ -6,6 +6,7 @@ body {
   line-height: 18px;
   position: relative;
   z-index: 1;
+  margin: 0;
 }
 * {
   -webkit-box-sizing: border-box;
@@ -116,4 +117,44 @@ div {
 
 .edit_trip{
   width: 100%;
+}
+
+#trip-data{
+  height: 120px;
+  background-color: black;
+}
+#trip-data a {
+  color: white;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 20px;
+    text-decoration: none;
+}
+
+header {
+  height: 120px;
+  background-color: black;
+  text-align: center;
+}
+
+header h2{
+  margin: 0;
+  padding-top: 5px;
+  color: white;
+  font-family: 'Philosopher', sans-serif;
+}
+
+header h3{
+  color: white;
+  font-family: 'Sacramento', cursive;
+}
+
+#new-trip-link{
+  position: absolute;
+  left: 50%;
+}
+
+#logout{
+  position: absolute;
+  top: 0;
+  right: 23px;
 }

@@ -1,14 +1,16 @@
+  <header>
   <h2 data-id="<%= @user.id %>"><%= @user.username %></h2>
   <h3><%= @user.fave_travel_quote %></h3>
+  <%= link_to("Logout", session_path, id: 'logout', method: :delete) %>
+</header>
 
 
 <div id="container" style="position: relative; width: 1400px; height: 500px;"></div>
+<div id="new-trip-link">
+<%= link_to 'New Trip', new_trip_path, :id => 'new-trip', :remote => true %>
+</div>
 <div id="trip-data"></div>
 
-
-
-<%= link_to 'New Trip', new_trip_path, :id => 'new-trip', :remote => true %>
-<%= link_to("Logout", session_path, method: :delete) %>
 
 
 
