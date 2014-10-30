@@ -12,7 +12,7 @@ body {
   -webkit-box-sizing: border-box;
 }
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -24,13 +24,13 @@ pre {
 }
 
 a {
-  color: #000;
+  color: #FF33CC;
   &:visited {
-    color: #666;
+    color: #FF33CC;
   }
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #FF33CC;
+    text-decoration: none;
   }
 }
 
@@ -176,7 +176,8 @@ border: 1px solid black;
 
 #new-trip-link{
   position: absolute;
-  left: 42%;
+  left: 69px;
+  top: 44%;
 }
 
 #logout{
@@ -187,4 +188,17 @@ border: 1px solid black;
 
 #small-p{
   font-size: 10px
+}
+
+#info{
+  text-align: center;
+  color: black;
+}
+
+#trip-stuff{
+  text-align: center;
+}
+
+a{
+  color: white;
 }

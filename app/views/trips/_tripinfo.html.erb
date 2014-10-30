@@ -1,19 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Trip name:</strong>
+<div id="trip-stuff">
+<h3 id="info">
   <%= @trip.trip_name %>
-</p>
+</h3>
+<p><%= @trip.trip_date %></p>
 
 <p>
   <strong>City:</strong>
   <%= @trip.city_name %>
 </p>
 
-<p>
-  <strong>Trip date:</strong>
-  <%= @trip.trip_date %>
-</p>
+
 
 <p>
   <strong>Description:</strong>
@@ -25,12 +23,12 @@
   <%= @trip.fave_memory %>
 </p>
 
-<p>
-  <strong>Photo:</strong>
-  <img src=" <%= @trip.photo %>">
-</p>
 
+<img width="300" height="250" src=" <%= @trip.photo %>">
+<br/>
 
-<%= link_to 'Edit', edit_trip_path(@trip), :remote => true %>
+<%= link_to edit_trip_path(@trip), :remote => true do %>
+<i class="fa fa-pencil fa-2x"></i>
+<% end %>
 
-
+</div>
