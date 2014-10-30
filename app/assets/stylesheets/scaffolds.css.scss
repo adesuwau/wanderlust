@@ -202,3 +202,21 @@ border: 1px solid black;
 a{
   color: white;
 }
+
+#black{
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  font-size: 30px;
+}
+
+#welcome-buttons{
+  position: absolute;
+  left: 41%;
+  bottom: -514px;
+}
+
+button{
+  background: rgba(0,0,0,0.4);
+  padding: 10px;
+  border-color: black;
+}
