@@ -23,6 +23,7 @@ $(document).ready(function(){
   $('body').on('click', '#add-to-wishlist', showWishlistForm);
   $('body').on('click', '#submit', closeWishlistForm);
   var userId = $('h2').data().id;
+
   var deferred1 = $.ajax({
     url: "/wishlists"
   });
