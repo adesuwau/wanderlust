@@ -30,6 +30,7 @@ gem 'pry-rails', group: :development
 gem 'bcrypt', '~> 3.1.7'
 gem 'countries'
 gem 'country-select'
+gem 'jquery-ui-rails'
 
 # Use unicorn as the app server
 # gem 'unicorn'

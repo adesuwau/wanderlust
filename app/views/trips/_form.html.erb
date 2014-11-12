@@ -33,8 +33,8 @@
   </div>
 </div>
 <div class="trip-form-content clearfix">
-    <div class="field">
-      <%= f.text_field :country_name, :placeholder => 'Country Name' %>
+    <div class="field ui-widget">
+      <%= f.text_field :country_name, :id => 'countries', :placeholder => 'Country Name' %>
     </div>
     <div class="field">
     <%= f.text_field :city_name, :placeholder => 'City Name' %>
@@ -44,6 +44,5 @@
   <div class="actions">
     <%= f.submit :id =>'submit' %>
   </div>
-
 
 <% end %>
