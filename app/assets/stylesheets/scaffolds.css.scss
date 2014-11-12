@@ -24,12 +24,12 @@ pre {
 }
 
 a {
-  color: #FF33CC;
+  color: #87B2A3;
   &:visited {
-    color: #FF33CC;
+    color: #87B2A3;
   }
   &:hover {
-    color: #FF33CC;
+    color: #87B2A3;
     text-decoration: none;
   }
 }
@@ -140,18 +140,18 @@ margin-left: 9em;
 
 #trip-data{
   height: 120px;
-  background-color: black;
+  background-color: #180E2D;
 }
 #trip-data a {
   color: white;
   font-family: 'Philosopher', sans-serif;
   font-size: 20px;
-    text-decoration: none;
+  text-decoration: none;
 }
 
 header {
   height: 120px;
-  background-color: black;
+  background-color: #180E2D;
   text-align: center;
 }
 
@@ -215,4 +215,18 @@ button{
   background: rgba(0,0,0,0.4);
   padding: 10px;
   border-color: black;
+}
+
+#trip-key-color{
+  background-color: #BFC196;
+  border: 1px solid black;
+  width: 100px;
+  height: 10px;
+}
+
+#wish-key-color{
+background-color: #E5DDBC;
+border: 1px solid black;
+width: 100px;
+height: 10px;
 }

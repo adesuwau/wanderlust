@@ -48,8 +48,8 @@ $.when(deferred1, deferred2).done(function(data1, data2) {
         element: document.getElementById('container'),
           fills: {
             defaultFill: 'rgba(0,0,0,0.6)',
-            isATrip: '#6de3cd',
-            wishlist: '#CC66FF'
+            isATrip: '#BFC196',
+            wishlist: '#E5DDBC'
           },
     done: function(datamap) {
       datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
@@ -88,3 +88,25 @@ function showWishlistForm(){
 function closeWishlistForm(){
   $('#new-trip-form').css('display', 'none');
 }
+
+$(function() {
+    var countries = [
+      "France",
+      "Nigeria",
+      "Australia ",
+      "South Africa",
+      "Italy",
+      "India",
+      "China",
+      "Japan",
+      "Scotland",
+      "Mexico",
+      "Brazil",
+      "Peru",
+      "Chile",
+      "Greece",
+    ];
+    $( "#countries" ).autocomplete({
+      source: countries
+    });
+  });
