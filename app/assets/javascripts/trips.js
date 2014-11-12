@@ -77,25 +77,3 @@ function closeWishlistForm(){
   $('#new-trip-form').css('display', 'none');
 }
 
-$(function() {
-  console.log('hi');
-    var countries = [
-      "France",
-      "Nigeria",
-      "Australia ",
-      "South Africa",
-      "Italy",
-      "India",
-      "China",
-      "Japan",
-      "Scotland",
-      "Mexico",
-      "Brazil",
-      "Peru",
-      "Chile",
-      "Greece",
-    ];
-    $( "#countries" ).autocomplete({
-      source: countries
-    });
-  });
