@@ -28,13 +28,6 @@ Users should be able to share their trip activity page from selected cities and 
 Users should be able to see suggestions and tips from said country on their wish list. (in progress)
 
 
-##ERD
-
-
-##Wireframe
-
-
-
 ##Technologies Used:
 
 * Ruby 2.1.2

@@ -12,4 +12,10 @@
 class City < ActiveRecord::Base
   belongs_to :country
   has_many :trips
+
+  # validate :country_exists
+
+  # def country_exists
+  #   return true unless county_list.includes?(self.county)
+  # end
 end
