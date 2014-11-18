@@ -11,7 +11,7 @@ wanderlust is a dynamic travel journal developed with the traveler in mind. To t
 
 ##User Stories
 
-Users should be able to log in to view their account (map)
+Users should be able to log in to view their account (custom map)
 
 Users should be able to select countries they have visited on the map
 
