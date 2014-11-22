@@ -11,13 +11,13 @@ wanderlust is a dynamic travel journal developed with the traveler in mind. To t
 
 ##User Stories
 
-Users should be able to log in to view their account (custom map)
+Users should be able to log in to view their account (custom map).
 
-Users should be able to select countries they have visited on the map
+Users should be able to select countries they have visited on the map.
 
-Users should be able to view trips taken in the selected countries
+Users should be able to view trips taken in the selected countries.
 
-Users should be able to view their activity from the selected country
+Users should be able to view their activity from the selected country.
 
 Users should be able to edit/update their activity from selected cities and countries.
 
